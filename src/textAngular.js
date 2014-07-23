@@ -99,7 +99,7 @@ See README.md or https://github.com/fraywing/textAngular/wiki for requirements a
 			if(/AppleWebKit\/([\d.]+)/.exec(navigator.userAgent)) style.appendChild(document.createTextNode(""));
 
 			// Add the <style> element to the page, add as first so the styles can be overridden by custom stylesheets
-			document.head.insertBefore(style,document.head.firstChild);
+            document.getElementsByTagName('head')[0].insertBefore(style,document.getElementsByTagName('head')[0].firstChild);
 
 			return style.sheet;
 		})();
